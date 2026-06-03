@@ -29,12 +29,13 @@ export function Gallery() {
             transition={{ duration: 0.5, delay: (i % 8) * 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ scale: 1.03, rotate: i % 2 ? 1.5 : -1.5 }}
             onClick={() => setActive(i)}
-            className="group relative block w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2 shadow-lg"
+            className="group relative block w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2 shadow-lg will-change-transform"
           >
             <img
               src={photo.src}
               alt={photo.caption}
               loading="lazy"
+              decoding="async"
               className="w-full rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:glow-rose" />
@@ -82,6 +83,7 @@ export function Gallery() {
               <img
                 src={GALLERY[active].src}
                 alt={GALLERY[active].caption}
+                decoding="async"
                 className="max-h-[70vh] w-full rounded-xl object-contain"
               />
             </motion.div>

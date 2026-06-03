@@ -21,7 +21,7 @@ export function Videos() {
             onClick={() => v.src && setOpen(i)}
             className="group relative aspect-video overflow-hidden rounded-2xl border border-white/10"
           >
-            <img src={v.poster} alt={v.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <img src={v.poster} alt={v.title} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
             <div className="absolute inset-0 grid place-items-center bg-black/40">
               <span className="grid h-14 w-14 place-items-center rounded-full bg-cosmic glow-rose">
                 <Play className="ml-1 h-6 w-6 text-primary-foreground" />

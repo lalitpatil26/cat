@@ -23,7 +23,7 @@ export function Timeline() {
             <div className="glass rounded-2xl p-5">
               <p className="text-xs uppercase tracking-widest text-gold">{m.date}</p>
               <h3 className="mt-1 font-display text-xl text-foreground">{m.title}</h3>
-              <img src={m.img} alt={m.title} loading="lazy" className="my-3 h-40 w-full rounded-lg object-cover" />
+              <img src={m.img} alt={m.title} loading="lazy" decoding="async" className="my-3 h-40 w-full rounded-lg object-cover" />
               <p className="text-sm text-muted-foreground">{m.text}</p>
             </div>
           </motion.div>
