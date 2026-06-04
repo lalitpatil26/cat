@@ -24,7 +24,7 @@ import { Finale } from "@/components/sections/Finale";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "A Universe Made For You — A Birthday Surprise" },
+      { title: "Savi" },
       { name: "description", content: "A magical, cinematic love-story experience created as a birthday surprise." },
       { property: "og:title", content: "A Universe Made For You" },
       { property: "og:description", content: "A magical, cinematic love-story experience created as a birthday surprise." },
@@ -54,8 +54,8 @@ function Index() {
 
       {unlocked && (
         <motion.main
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="relative"
         >

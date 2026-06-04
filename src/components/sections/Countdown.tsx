@@ -311,7 +311,7 @@ export function Countdown() {
       <SectionTitle
         eyebrow="Birthday Countdown"
         title="The Big Day Is Coming"
-        subtitle="Counting every second until I get to celebrate you.Wait for 00:00:00 ,something special is coming for you 🎁"
+        subtitle="Counting every second until I get to celebrate you.Wait for 00:00:00 . Something special is coming for you here 🎁"
       />
 
       {/* Tiles row */}

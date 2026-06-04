@@ -8,7 +8,7 @@ export function Videos() {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <SectionWrap id="videos">
-      <SectionTitle eyebrow="Video Memories" title="Moments In Motion" subtitle="Some memories deserve to be relived. Replace these with your own clips." />
+      <SectionTitle eyebrow="Video Memories" title="Moments In Motion" subtitle="Some memories deserve to be relived." />
       <div className="mx-auto grid w-full max-w-5xl gap-5 sm:grid-cols-3">
         {VIDEOS.map((v, i) => (
           <motion.button
