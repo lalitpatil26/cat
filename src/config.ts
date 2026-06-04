@@ -17,7 +17,7 @@ export const PASSWORD_HINT = "Hint: I know You can guess ";
 export const CONFIG = {
   herName: "Savi",
   yourName: "Labbu",
-  birthday: "2026-06-26T00:00:00",
+  birthday: "2026-06-04T12:18:00+05:30",
   music: {
     src: "/music/vite.config.mp3",
     title: "Our Song",
