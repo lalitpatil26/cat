@@ -275,7 +275,7 @@ I Love You Infinite Times. ❤️♾️🫂
 // ─── Main component ───────────────────────────────────────────────────────────
 export function Countdown() {
   // Countdown starts from 10 minutes after page load
-  const targetRef = useRef(Date.now() + 2 * 60 * 1000);
+  const targetRef = useRef(Date.now() + 10 * 60 * 1000);
   const target = targetRef.current;
 
   const [time, setTime] = useState(() => diff(target));
