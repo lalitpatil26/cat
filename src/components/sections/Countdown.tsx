@@ -274,7 +274,7 @@ I Love You Infinite Times. ❤️♾️🫂
 
 // ─── Main component ───────────────────────────────────────────────────────────
 export function Countdown() {
-  const target = new Date(CONFIG.birthday).getTime();
+  const target = Date.now() + 10 * 60 * 1000; // 10 minutes from now
   const [time, setTime] = useState(() => diff(target));
   const isDone = time.days === 0 && time.hours === 0 && time.minutes === 0 && time.seconds === 0;
 
