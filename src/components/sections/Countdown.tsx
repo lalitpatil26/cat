@@ -274,21 +274,38 @@ I Love You Infinite Times. ❤️♾️🫂
 
 // ─── Main component ───────────────────────────────────────────────────────────
 export function Countdown() {
-  const target = Date.now() + 10 * 60 * 1000; // 10 minutes from now
+  // Countdown starts from 10 minutes after page load
+  const targetRef = useRef(Date.now() + 10 * 60 * 1000);
+  const target = targetRef.current;
+
   const [time, setTime] = useState(() => diff(target));
-  const isDone = time.days === 0 && time.hours === 0 && time.minutes === 0 && time.seconds === 0;
+
+  const isDone =
+    time.days === 0 &&
+    time.hours === 0 &&
+    time.minutes === 0 &&
+    time.seconds === 0;
 
   useEffect(() => {
-    const id = setInterval(() => setTime(diff(target)), 1000);
+    const update = () => {
+      const remaining = diff(target);
+      setTime(remaining);
+    };
+
+    update();
+
+    const id = setInterval(update, 1000);
     return () => clearInterval(id);
   }, [target]);
 
   const units = [
-    { label: "Days",    value: time.days    },
-    { label: "Hours",   value: time.hours   },
+    { label: "Days", value: time.days },
+    { label: "Hours", value: time.hours },
     { label: "Minutes", value: time.minutes },
     { label: "Seconds", value: time.seconds },
   ];
+
+
 
   return (
     <SectionWrap id="countdown">
